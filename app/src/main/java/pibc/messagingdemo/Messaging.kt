@@ -77,7 +77,7 @@ class Messaging @Inject constructor(
         LivePerson.setCallback(object : LivePersonCallback {
 
             override fun onConversationStarted(convData: LPConversationData) {
-                logger.v(LogTag.MSG, "onConversationStarted($convData)")
+                logger.v(LogTag.MSG, "onConversationStarted(${convData.id})")
                 _onConversationStarted.onNext(convData.id)
             }
 
