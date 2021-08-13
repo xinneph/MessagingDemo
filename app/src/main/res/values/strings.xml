@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MessagingDemo</string>
+    <string name="action_end_conversation">End conversation</string>
 </resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /*
+  ~  * 2018 © T-Mobile USA, Inc. – All Rights Reserved
+  ~  * Not for release external to T-Mobile USA and partners under contract.
+  ~  * Source code subject to change.  Refer to NOTICE.txt in source tree for changes and attributions.
+  ~  */
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ConversationActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00FFFFFF">
+
+        <include
+            android:id="@+id/include_toolbar2"
+            layout="@layout/application_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/include_toolbar2"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/conversation_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

@@ -3,11 +3,22 @@
     package="pibc.messagingdemo">
 
     <application
+        android:name=".ConversationApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MessagingDemo" />
+        android:theme="@style/Theme.MessagingDemo">
+        <activity
+            android:name=".ConversationActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>

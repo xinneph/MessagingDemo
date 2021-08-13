@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -29,6 +31,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    dataBinding.enabled = true
 }
 
 dependencies {
@@ -39,4 +42,15 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation "com.google.dagger:hilt-android:2.38.1"
+    kapt "com.google.dagger:hilt-compiler:2.38.1"
+    implementation "com.liveperson.android:lp_messaging_sdk:5.7.0"
+    implementation "io.reactivex.rxjava3:rxjava:3.0.13"
+    implementation "io.reactivex.rxjava3:rxandroid:3.0.0"
+    implementation "io.reactivex.rxjava3:rxkotlin:3.0.1"
+}
+
+kapt {
+    correctErrorTypes true
 }
